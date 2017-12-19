@@ -2,7 +2,8 @@
 
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
-import loading from './static/img/loading.png'
+import image from './static/img/loading.png'
+
 const spin = keyframes`
   from{
     transform: rotate(0deg);
@@ -19,6 +20,6 @@ const Image = styled.img`
 	width: 30px;
 `
 
-const Loading = () => <Image src={loading} alt="loading indicator" />
+const Loading = () => <Image src={image} alt="loading indicator" />
 
 export default Loading

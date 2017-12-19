@@ -1,20 +1,20 @@
 // @flow
 
-
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+// import WebSocket from 'mock-socket'
 import Table from './Table'
 import Loading from './Loading'
 import Indicator from './Indicators'
 
 class App extends Component {
-  // initializing state variables
+	// initializing state variables
 	state = {
 		items: [], // initializing empty list of items
 		count: 0, // setting count to 0
 	}
 
 	componentWillMount() {
-		// initialising WebSocket before Component mounts
+		// initialising WebSocket after Component mounts
 		const connection = new WebSocket('ws://stocks.mnet.website')
 		connection.onmessage = evt => {
 			this.handleUpdateMessage(evt.data) // call handleUpdateMessage on message.
@@ -155,7 +155,7 @@ class App extends Component {
 	}
 	// ===========================================================================
 
-  render() {
+	render() {
 		let tableComponent
 		if (this.state.count < 13) {
 			tableComponent = <Loading />

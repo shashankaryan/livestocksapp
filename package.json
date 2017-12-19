@@ -5,16 +5,20 @@
   "private": true,
   "dependencies": {
     "eslint": "^4.13.1",
+    "flow": "^0.2.3",
     "gh-pages": "^1.1.0",
+    "jest": "^22.0.3",
+    "mock-socket": "^7.1.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
     "styled-components": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "jest",
     "eject": "react-scripts eject",
     "deploy": "npm run build&&gh-pages -d build"
   }
